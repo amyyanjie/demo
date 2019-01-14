@@ -4,9 +4,10 @@ package com.example.demo.config;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
-//@Configuration
+@Configuration
 //@PropertySource("classpath:application.properties")
 @ConfigurationProperties(prefix = "com.user")
 /*
@@ -18,6 +19,7 @@ import org.springframework.stereotype.Component;
 3.若其他路径，需要使用注解@Configuration,@PropertySource("classpath:**.properties")
 
 4.在启动类中用@EnableConfigurationProperties({TestConfigBean.class, ConfigBean.class})明确指定哪个实体类来装在配置信息
+  或者在配置类中添加注解@Configuration
 */
 
 @Component

@@ -1,0 +1,82 @@
+<configuration>
+	<!-- %m输出的信息,%p日志级别,%t线程名,%d日期,%c类的全名,%i指定索引,,, -->
+	<!--把日志输出到控制台-->
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%t %d %p (%file:%line\)- %m%n</pattern>
+			<charset>UTF-8</charset>
+		</encoder>
+	</appender>
+	<!--把日志输出到文件-->
+	<appender name="baselog"
+			  class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<!--file:被写入的文件名-->
+		<File>log/demo.log</File>
+		<!--rollingPolicy:时间滚动策略-->
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<!--必须包含%i:指定索引-->
+			<fileNamePattern>log/demo.log.%d.%i</fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<!--or whenever the file size reaches 64 MB-->
+				<!--活动文件大小-->
+				<maxFileSize>64 MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+		<encoder>
+			<pattern>
+				%t %d %p (%file:%line\)- %m%n
+			</pattern>
+			<charset>UTF-8</charset>
+			<!-- 此处设置字符集 -->
+		</encoder>
+	</appender>
+
+	<!--logback的配置，需要配置输出源appender，打日志的logger（子节点）和root（根节点），
+	实际上，它输出日志是从子节点开始，子节点如果有输出源直接输入，
+	如果无，判断配置的addtivity，是否像上级传递，即是否向root传递，传递则采用root的输出源，否则不输出日志。-->
+	<root level="info">
+		<!--表示把>=info级别输出到控制台-->
+		<appender-ref ref="baselog" />
+	</root>
+
+	<logger name="org.springframework" level="WARN" />
+	<logger name="org.hibernate" level="WARN" />
+	<!-->-debug级别日志输出到文件-->
+	<logger name="com.example" level="debug">
+		<appender-ref ref="STDOUT"/>   <!--debug级别下，这行注释掉，则不往控制台输出，启动DemoApplication，没有日志输出-->
+		<appender-ref ref="baselog"/>
+	</logger>
+	<!-->=error级别日志输出到控制台和文件-->
+	<logger name="com.netflix" level="error">
+		<appender-ref ref="STDOUT"/>
+		<appender-ref ref="baselog"/>
+	</logger>
+
+
+
+	<!--以下为多环境下logger节点配置-->
+	<!--<springProfile name="test,dev">-->
+		<!--<logger name="com.axt" level="DEBUG">-->
+			<!--<appender-ref ref="baselog"/>-->
+		<!--</logger>-->
+		<!--<logger name="com.netflix" level="error">-->
+			<!--<appender-ref ref="STDOUT"/>-->
+			<!--<appender-ref ref="baselog"/>-->
+		<!--</logger>-->
+	<!--</springProfile>-->
+	<!--<springProfile name="pre,pro">-->
+		<!--<logger name="com.axt" level="INFO">-->
+
+			<!--<appender-ref ref="baselog" />-->
+		<!--</logger>-->
+		<!--<logger name="com.netflix" level="error">-->
+	        <!--将日志输出到控制台中-->
+			<!--<appender-ref ref="STDOUT"/>-->
+	        <!--将日志输出到文件中-->
+			<!--<appender-ref ref="baselog"/>-->
+		<!--</logger>-->
+	<!--</springProfile>-->
+</configuration>
+
+<!-- 使用mybatis的时候，sql语句是debug下才会打印-->

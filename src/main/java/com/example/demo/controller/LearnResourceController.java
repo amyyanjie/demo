@@ -16,6 +16,8 @@ public class LearnResourceController {
     @RequestMapping("")
     public ModelAndView getLearnResource() {
         List<LearnResource> learnList = new ArrayList<>();
+        log.debug("添加学习资源");
+        log.info("添加学习资源");
         LearnResource bean = new LearnResource("官方参考文档", "Spring Boot Reference Guide", "http://docs.spring.io/spring-boot/docs/1.5.1.RELEASE/reference/htmlsingle/#getting-started-first-application");
         learnList.add(bean);
         bean = new LearnResource("官方SpriongBoot例子", "官方SpriongBoot例子", "https://github.com/spring-projects/spring-boot/tree/master/spring-boot-samples");
@@ -40,5 +42,12 @@ public class LearnResourceController {
         ModelAndView modelAndView = new ModelAndView("index");
         modelAndView.addObject("learnList", learnList);
         return modelAndView;
+    }
+
+    public static void main(String[] args) {
+        log.trace("trace级别日志");
+        log.debug("debug级别日志");
+        log.info("info级别日志");
+        log.error("error级别日志");
     }
 }

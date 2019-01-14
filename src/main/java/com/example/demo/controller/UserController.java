@@ -3,11 +3,13 @@ package com.example.demo.controller;
 import com.example.demo.config.ConfigBean;
 import com.example.demo.config.TestConfigBean;
 import com.example.demo.vars.DemoVars;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+@Slf4j
 @RestController
 public class UserController {
     //通过注解@Value("${}")绑定到属性字段上
@@ -31,6 +33,8 @@ public class UserController {
 //   1. 获取@Value绑定的属性字段
 //    return name+property;
 
+        log.debug("name:{}",configBean.getName());
+        log.info("property:{}",testConfigBean.getProperty());
 //        2.注入配置信息实体类，获取属性
         return configBean.getName() + configBean.getProperty()
                 + configBean.getPasswd() + configBean.getAge();

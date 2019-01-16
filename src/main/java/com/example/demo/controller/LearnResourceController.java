@@ -1,22 +1,33 @@
 package com.example.demo.controller;
 
 import com.example.demo.domain.LearnResource;
+import com.example.demo.service.ILearnResourceService;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.ibatis.annotations.Param;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @Slf4j
 @RequestMapping("/learn")
 public class LearnResourceController {
     private static Logger logger = LoggerFactory.getLogger(LearnResourceController.class);
-    @RequestMapping("")
+
+    @Autowired
+    private ILearnResourceService learnResourceService;
+
+    @RequestMapping("/test")
     public ModelAndView getLearnResource() {
         List<LearnResource> learnList = new ArrayList<>();
         log.debug("添加学习资源");
@@ -47,4 +58,8 @@ public class LearnResourceController {
         return modelAndView;
     }
 
+    @GetMapping("/get/{id}")
+    public LearnResource getLearnResourceById(@PathVariable("id") int id) {
+        return learnResourceService.getLearnResourceById(id);
+    }
 }

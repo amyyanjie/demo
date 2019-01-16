@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.dao.LearnResourceMapper">
+    <resultMap id="learnResourceMap" type="com.example.demo.domain.LearnResource">
+        <id column="id" property="id" jdbcType="INT"/>
+        <result column="author" property="author" jdbcType="VARCHAR"/>
+        <result column="title" property="title" jdbcType="VARCHAR"/>
+        <result column="url" property="url" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="baseColumnList">
+        id,author,title,url
+    </sql>
+
+    <insert id="addLearnResource" parameterType="com.example.demo.domain.LearnResource">
+        insert into learn_resource (author,title,url) values (#{author},#{title},#{url})
+    </insert>
+
+    <select id="getLearnResourceById" resultMap="learnResourceMap" parameterType="int">
+        select
+        <include refid="baseColumnList"/>
+        from learn_resource
+        where id=#{id}
+    </select>
+
+    <update id="updateLearnResource" parameterType="com.example.demo.domain.LearnResource">
+        update learn_resource
+        set author=#{author},title=#{title},url=#{url}
+        where id=#{id}
+    </update>
+
+</mapper>

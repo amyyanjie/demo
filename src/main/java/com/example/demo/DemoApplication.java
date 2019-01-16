@@ -1,10 +1,7 @@
 package com.example.demo;
 
-import com.example.demo.config.ConfigBean;
-import com.example.demo.config.TestConfigBean;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ApplicationContext;
 import org.springframework.core.env.Environment;
 
@@ -17,6 +14,10 @@ public class DemoApplication {
 
     public static void main(String[] args) {
         context = SpringApplication.run(DemoApplication.class, args);
+//      context=new SpringApplicationBuilder(DemoApplication.class)
+//              .properties("spring.application.name=demo").properties("server.port=8080")
+//              .run(args);
+        //这里设置properties与在.properties配置文件中设置效果相同，但.properties优先级要高于这里
         environment = context.getEnvironment();
     }
 

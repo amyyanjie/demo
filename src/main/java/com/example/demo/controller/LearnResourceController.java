@@ -2,6 +2,8 @@ package com.example.demo.controller;
 
 import com.example.demo.domain.LearnResource;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -13,6 +15,7 @@ import java.util.List;
 @Slf4j
 @RequestMapping("/learn")
 public class LearnResourceController {
+    private static Logger logger = LoggerFactory.getLogger(LearnResourceController.class);
     @RequestMapping("")
     public ModelAndView getLearnResource() {
         List<LearnResource> learnList = new ArrayList<>();
@@ -44,10 +47,4 @@ public class LearnResourceController {
         return modelAndView;
     }
 
-    public static void main(String[] args) {
-        log.trace("trace级别日志");
-        log.debug("debug级别日志");
-        log.info("info级别日志");
-        log.error("error级别日志");
-    }
 }

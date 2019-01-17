@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
 @Configuration
-//@PropertySource("classpath:application.properties")
+//@PropertySource("classpath:application-dev.properties")
 @ConfigurationProperties(prefix = "com.user")
 /*
 1.使用@ConfigurationProperties注解将一配置文件信息封装成实体

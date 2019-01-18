@@ -7,8 +7,8 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 @Mapper
-@Component
-//@Repository("learnResourceMapper")
+//@Component
+@Repository
 public interface LearnResourceMapper {
     int addLearnResource(LearnResource learnResource);
 

@@ -58,8 +58,8 @@ public class LearnResourceController {
     }
 
     @ResponseBody
-    @GetMapping("/get/{id}")
-    public LearnResource getLearnResourceById(@PathVariable("id") int id) {
+    @GetMapping("/get")
+    public LearnResource getLearnResourceById( int id) {
         return learnResourceService.getLearnResourceById(id);
     }
 }

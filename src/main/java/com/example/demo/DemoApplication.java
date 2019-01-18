@@ -3,6 +3,7 @@ package com.example.demo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.env.Environment;
 
 //@EnableConfigurationProperties({TestConfigBean.class, ConfigBean.class})//此注解用来指定用TestConfigBean，ConfigBean实体类来装载配置信息

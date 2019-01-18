@@ -37,11 +37,11 @@
 	如果无，判断配置的addtivity，是否像上级传递，即是否向root传递，传递则采用root的输出源，否则不输出日志。-->
 	<root level="info">
 		<!--表示把>=info级别输出到控制台-->
-		<appender-ref ref="baselog" />
+		<appender-ref ref="STDOUT"/>
 	</root>
 
-	<logger name="org.springframework" level="WARN" />
-	<logger name="org.hibernate" level="WARN" />
+	<logger name="org.springframework" level="debug" />
+	<logger name="org.hibernate" level="info" />
 	<!-->-debug级别日志输出到文件-->
 	<logger name="com.example" level="debug">
 		<appender-ref ref="STDOUT"/>   <!--debug级别下，这行注释掉，则不往控制台输出，启动DemoApplication，没有日志输出-->

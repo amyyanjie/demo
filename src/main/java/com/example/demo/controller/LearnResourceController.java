@@ -1,14 +1,17 @@
 package com.example.demo.controller;
 
 import com.example.demo.domain.LearnResource;
+import com.example.demo.service.ILearnResourceService;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
@@ -20,8 +23,8 @@ import java.util.List;
 public class LearnResourceController {
     private static Logger logger = LoggerFactory.getLogger(LearnResourceController.class);
 
-//    @Autowired
-//    private ILearnResourceService learnResourceService;
+    @Autowired
+    private ILearnResourceService learnResourceService;
 
     @RequestMapping("/test")
     public ModelAndView getLearnResource() {
@@ -54,8 +57,9 @@ public class LearnResourceController {
         return modelAndView;
     }
 
-//    @GetMapping("/get/{id}")
-//    public LearnResource getLearnResourceById(@PathVariable("id") int id) {
-//        return learnResourceService.getLearnResourceById(id);
-//    }
+    @ResponseBody
+    @GetMapping("/get/{id}")
+    public LearnResource getLearnResourceById(@PathVariable("id") int id) {
+        return learnResourceService.getLearnResourceById(id);
+    }
 }

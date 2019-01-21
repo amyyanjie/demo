@@ -7,6 +7,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.core.env.Environment;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.annotation.Resource;
@@ -28,9 +29,7 @@ public class DemoApplicationTests {
         long id=1000;
         LearnResource resource = learnResourceMapper.getLearnResourceById(id);
         System.out.println(resource.getAuthor());
-
     }
-
 
 }
 

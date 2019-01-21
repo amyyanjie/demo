@@ -10,7 +10,7 @@ import org.apache.ibatis.annotations.*;
 
 //@Component
 //@Repository
-@MapperScan
+@Mapper
 public interface LearnResourceMapper {
     int addLearnResource(LearnResource learnResource);
 

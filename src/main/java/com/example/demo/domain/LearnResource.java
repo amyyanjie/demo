@@ -14,7 +14,14 @@ public class LearnResource implements Serializable {
         this.url = url;
     }
 
-    private int id;
+    public LearnResource(Long id, String author, String title, String url) {
+        this.id = id;
+        this.author = author;
+        this.title = title;
+        this.url = url;
+    }
+
+    private Long id;
     private String author;
     private String title;
     private String url;

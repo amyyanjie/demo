@@ -1,11 +1,15 @@
 package com.example.demo;
 
-import org.mybatis.spring.annotation.MapperScan;
+import com.alibaba.druid.pool.DruidDataSource;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.env.Environment;
+
+import javax.activation.DataSource;
 
 //@EnableConfigurationProperties({TestConfigBean.class, ConfigBean.class})//此注解用来指定用TestConfigBean，ConfigBean实体类来装载配置信息
 //若不指定，可在ConfigBean或TestConfigBean等配置文件中添加注解@Configuration
@@ -16,6 +20,7 @@ public class DemoApplication {
     private static Environment environment;
 
     public static void main(String[] args) {
+//        SpringApplication.run(DemoApplication.class, args);
         context = SpringApplication.run(DemoApplication.class, args);
 //      context=new SpringApplicationBuilder(DemoApplication.class)
 //              .properties("spring.application.name=demo").properties("server.port=8080")
@@ -30,6 +35,27 @@ public class DemoApplication {
 
     public static Environment getEnvironment() {
         return environment;
+    }
+
+    @Autowired
+    private Environment env;
+    //destroy-method="close"的作用是当数据库连接不使用的时候,就把该连接重新放到数据池中,方便下次使用调用.
+    @Bean(destroyMethod = "close")
+    public DruidDataSource dataSource() {
+        DruidDataSource dataSource = new DruidDataSource();
+        dataSource.setUrl(env.getProperty("spring.datasource.url"));
+        dataSource.setUsername(env.getProperty("spring.datasource.username"));//用户名
+        dataSource.setPassword(env.getProperty("spring.datasource.password"));//密码
+        dataSource.setDriverClassName(env.getProperty("spring.datasource.driver-class-name"));
+        dataSource.setInitialSize(2);//初始化时建立物理连接的个数
+        dataSource.setMaxActive(20);//最大连接池数量
+        dataSource.setMinIdle(0);//最小连接池数量
+        dataSource.setMaxWait(60000);//获取连接时最大等待时间，单位毫秒。
+        dataSource.setValidationQuery("SELECT 1");//用来检测连接是否有效的sql
+        dataSource.setTestOnBorrow(false);//申请连接时执行validationQuery检测连接是否有效
+        dataSource.setTestWhileIdle(true);//建议配置为true，不影响性能，并且保证安全性。
+        dataSource.setPoolPreparedStatements(false);//是否缓存preparedStatement，也就是PSCache
+        return dataSource;
     }
 }
 

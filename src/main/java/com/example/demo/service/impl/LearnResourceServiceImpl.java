@@ -18,7 +18,7 @@ public class LearnResourceServiceImpl implements ILearnResourceService {
     }
 
     @Override
-    public LearnResource getLearnResourceById(int id) {
+    public LearnResource getLearnResourceById(long id) {
         return learnResourceMapper.getLearnResourceById(id);
     }
 

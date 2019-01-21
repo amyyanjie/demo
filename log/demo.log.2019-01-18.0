@@ -1,0 +1,91 @@
+main 2019-01-18 09:32:56,458 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 824 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-18 09:32:56,459 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-18 09:32:56,461 INFO (SpringApplication.java:679)- The following profiles are active: dev
+main 2019-01-18 09:39:11,338 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 837 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-18 09:39:11,339 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-18 09:39:11,340 INFO (SpringApplication.java:679)- The following profiles are active: dev
+main 2019-01-18 09:40:03,035 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 841 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-18 09:40:03,036 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-18 09:40:03,037 INFO (SpringApplication.java:679)- The following profiles are active: dev
+main 2019-01-18 09:40:16,042 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 844 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-18 09:40:16,042 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-18 09:40:16,043 INFO (SpringApplication.java:679)- The following profiles are active: dev
+main 2019-01-18 09:50:25,612 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 895 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-18 09:50:25,613 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-18 09:50:25,614 INFO (SpringApplication.java:679)- The following profiles are active: dev
+main 2019-01-18 09:51:05,541 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 903 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-18 09:51:05,541 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-18 09:51:05,542 INFO (SpringApplication.java:679)- The following profiles are active: dev
+main 2019-01-18 10:01:34,215 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 934 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-18 10:01:34,216 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-18 10:01:34,217 INFO (SpringApplication.java:679)- The following profiles are active: dev
+main 2019-01-18 10:03:33,178 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 946 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-18 10:03:33,179 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-18 10:03:33,180 INFO (SpringApplication.java:679)- The following profiles are active: dev
+main 2019-01-18 10:14:39,111 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 1004 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-18 10:14:39,112 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-18 10:14:39,114 INFO (SpringApplication.java:679)- The following profiles are active: dev
+main 2019-01-18 10:14:57,670 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 1011 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-18 10:14:57,671 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-18 10:14:57,672 INFO (SpringApplication.java:679)- The following profiles are active: dev
+main 2019-01-18 10:18:40,332 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 1030 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-18 10:18:40,333 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-18 10:18:40,334 INFO (SpringApplication.java:679)- The following profiles are active: dev
+main 2019-01-18 10:33:16,797 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 1076 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-18 10:33:16,798 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-18 10:33:16,799 INFO (SpringApplication.java:679)- The following profiles are active: dev
+main 2019-01-18 10:34:09,945 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 1083 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-18 10:34:09,946 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-18 10:34:09,947 INFO (SpringApplication.java:679)- The following profiles are active: dev
+main 2019-01-18 10:35:08,177 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 1087 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-18 10:35:08,178 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-18 10:35:08,179 INFO (SpringApplication.java:679)- The following profiles are active: dev
+main 2019-01-18 10:36:36,511 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 1094 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-18 10:36:36,512 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-18 10:36:36,513 INFO (SpringApplication.java:679)- The following profiles are active: dev
+main 2019-01-18 10:36:38,182 INFO (StartupInfoLogger.java:59)- Started DemoApplication in 2.026 seconds (JVM running for 2.487)
+main 2019-01-18 10:40:35,765 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 1109 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-18 10:40:35,766 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-18 10:40:35,766 INFO (SpringApplication.java:679)- The following profiles are active: dev
+main 2019-01-18 10:40:37,157 INFO (StartupInfoLogger.java:59)- Started DemoApplication in 1.72 seconds (JVM running for 2.28)
+main 2019-01-18 11:19:32,499 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 1190 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-18 11:19:32,499 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-18 11:19:32,500 INFO (SpringApplication.java:679)- The following profiles are active: dev
+main 2019-01-18 11:19:33,848 INFO (StartupInfoLogger.java:59)- Started DemoApplication in 1.695 seconds (JVM running for 2.331)
+main 2019-01-18 11:20:19,531 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 1196 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-18 11:20:19,534 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-18 11:20:19,535 INFO (SpringApplication.java:679)- The following profiles are active: dev
+main 2019-01-18 11:20:20,803 INFO (StartupInfoLogger.java:59)- Started DemoApplication in 1.569 seconds (JVM running for 2.001)
+main 2019-01-18 11:22:01,290 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 1213 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-18 11:22:01,292 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-18 11:22:01,293 INFO (SpringApplication.java:679)- The following profiles are active: dev
+main 2019-01-18 11:22:13,652 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 1217 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-18 11:22:13,655 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-18 11:22:13,656 INFO (SpringApplication.java:679)- The following profiles are active: dev
+main 2019-01-18 11:22:14,966 INFO (StartupInfoLogger.java:59)- Started DemoApplication in 1.607 seconds (JVM running for 2.023)
+main 2019-01-18 11:23:34,672 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 1234 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-18 11:23:34,674 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-18 11:23:34,675 INFO (SpringApplication.java:679)- The following profiles are active: dev
+main 2019-01-18 11:30:09,604 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 1253 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-18 11:30:09,607 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-18 11:30:09,608 INFO (SpringApplication.java:679)- The following profiles are active: dev
+main 2019-01-18 11:30:11,200 INFO (StartupInfoLogger.java:59)- Started DemoApplication in 1.969 seconds (JVM running for 2.623)
+main 2019-01-18 11:30:22,908 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 1261 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-18 11:30:22,911 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-18 11:30:22,912 INFO (SpringApplication.java:679)- The following profiles are active: dev
+main 2019-01-18 11:32:03,892 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 1270 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-18 11:32:03,895 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-18 11:32:03,896 INFO (SpringApplication.java:679)- The following profiles are active: dev
+main 2019-01-18 11:32:05,479 INFO (StartupInfoLogger.java:59)- Started DemoApplication in 1.939 seconds (JVM running for 2.405)
+main 2019-01-18 11:40:05,150 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 1298 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-18 11:40:05,153 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-18 11:40:05,154 INFO (SpringApplication.java:679)- The following profiles are active: dev
+main 2019-01-18 11:40:06,861 INFO (StartupInfoLogger.java:59)- Started DemoApplication in 2.154 seconds (JVM running for 3.337)
+main 2019-01-18 11:59:44,501 INFO (StartupInfoLogger.java:50)- Starting DemoApplicationTests on yanjiedeMacBook-Pro.local with PID 1357 (started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-18 11:59:44,502 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-18 11:59:44,504 INFO (SpringApplication.java:679)- The following profiles are active: dev
+main 2019-01-18 11:59:46,433 INFO (StartupInfoLogger.java:59)- Started DemoApplicationTests in 2.347 seconds (JVM running for 3.084)
+main 2019-01-18 12:01:32,640 INFO (StartupInfoLogger.java:50)- Starting DemoApplicationTests on yanjiedeMacBook-Pro.local with PID 1361 (started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-18 12:01:32,641 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-18 12:01:32,643 INFO (SpringApplication.java:679)- The following profiles are active: dev
+main 2019-01-18 12:01:34,686 INFO (StartupInfoLogger.java:59)- Started DemoApplicationTests in 2.415 seconds (JVM running for 3.259)

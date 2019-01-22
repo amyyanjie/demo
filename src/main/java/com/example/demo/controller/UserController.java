@@ -6,6 +6,7 @@ import com.example.demo.config.ConfigBean;
 import com.example.demo.config.TestConfigBean;
 import com.example.demo.domain.User;
 import com.example.demo.service.IUserService;
+import com.example.demo.utils.StringUtil;
 import com.example.demo.vars.DemoVars;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
@@ -72,7 +73,7 @@ public class UserController {
 
     @PostMapping(value = "/add")
     public Result addUser(@RequestBody User user) {
-        if (user.getMobile() == null) {
+        if (StringUtil.isEmpty(user.getMobile())) {
             return Result.error(ResultStatus.ERROR_PRAMATER_NULL);
         }
         User exsitedUser = userService.getUserByMobile(user.getMobile());

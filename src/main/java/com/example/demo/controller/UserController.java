@@ -1,5 +1,7 @@
 package com.example.demo.controller;
 
+import com.example.demo.Result.Result;
+import com.example.demo.Result.ResultStatus;
 import com.example.demo.config.ConfigBean;
 import com.example.demo.config.TestConfigBean;
 import com.example.demo.domain.User;
@@ -60,16 +62,32 @@ public class UserController {
     private IUserService userService;
 
     @GetMapping("get/list")
-    public PageInfo<User> getUserList(@RequestParam(defaultValue = "1", required = false) int pageNum,
-                                  @RequestParam(defaultValue = "5", required = false) int pageSize) {
+    public Result getUserList(@RequestParam(defaultValue = "1", required = false) int pageNum,
+                              @RequestParam(defaultValue = "5", required = false) int pageSize) {
         PageHelper.startPage(pageNum, pageSize);
         List<User> list = userService.getAllUserList();
         PageInfo<User> pageInfo = new PageInfo<>(list);
-        return pageInfo;
+        return Result.ok(pageInfo);
     }
 
     @PostMapping(value = "/add")
-    public int addUser(@RequestBody User user) {
-        return userService.addUser(user);
+    public Result addUser(@RequestBody User user) {
+        if (user.getMobile() == null) {
+            return Result.error(ResultStatus.ERROR_PRAMATER_NULL);
+        }
+        User exsitedUser = userService.getUserByMobile(user.getMobile());
+        if (exsitedUser != null) {
+            return Result.error(ResultStatus.ERROR_MOBILE_EXIST);
+        }
+        int result = userService.addUser(user);
+        if (result < 1) {
+            return Result.error("添加用户失败");
+        }
+        return Result.ok();
+    }
+
+    @GetMapping("/get/by/mobile")
+    public Result getUser(String mobile) {
+        return Result.ok(userService.getUserByMobile(mobile));
     }
 }

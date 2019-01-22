@@ -73,3 +73,36 @@ main 2019-01-22 10:50:13,578 INFO (StartupInfoLogger.java:50)- Starting DemoAppl
 main 2019-01-22 10:50:13,581 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
 main 2019-01-22 10:50:13,583 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
 main 2019-01-22 10:50:15,138 INFO (StartupInfoLogger.java:59)- Started DemoApplication in 1.881 seconds (JVM running for 2.511)
+main 2019-01-22 12:02:56,493 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 3431 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-22 12:02:56,496 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-22 12:02:56,497 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-22 12:02:58,049 INFO (StartupInfoLogger.java:59)- Started DemoApplication in 1.878 seconds (JVM running for 2.5)
+http-nio-8080-exec-2 2019-01-22 12:03:21,503 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select * from user_info where mobile=? 
+http-nio-8080-exec-2 2019-01-22 12:03:21,522 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 17610575922(String)
+http-nio-8080-exec-2 2019-01-22 12:03:21,545 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+http-nio-8080-exec-4 2019-01-22 12:52:36,427 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select * from user_info where mobile=? 
+http-nio-8080-exec-4 2019-01-22 12:52:36,431 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 17610575922(String)
+http-nio-8080-exec-4 2019-01-22 12:52:36,444 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+http-nio-8080-exec-6 2019-01-22 12:55:24,442 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select * from user_info where mobile=? 
+http-nio-8080-exec-6 2019-01-22 12:55:24,445 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 17610575922(String)
+http-nio-8080-exec-6 2019-01-22 12:55:24,448 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+main 2019-01-22 13:00:26,634 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 3524 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-22 13:00:26,637 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-22 13:00:26,639 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-22 13:00:28,191 INFO (StartupInfoLogger.java:59)- Started DemoApplication in 1.893 seconds (JVM running for 2.523)
+http-nio-8080-exec-1 2019-01-22 13:01:50,868 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select * from user_info where mobile=? 
+http-nio-8080-exec-1 2019-01-22 13:01:50,887 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 17610575922(String)
+http-nio-8080-exec-1 2019-01-22 13:01:50,909 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+main 2019-01-22 13:02:30,342 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 3532 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-22 13:02:30,345 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-22 13:02:30,347 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-22 13:02:31,885 INFO (StartupInfoLogger.java:59)- Started DemoApplication in 1.868 seconds (JVM running for 2.498)
+http-nio-8080-exec-1 2019-01-22 13:02:43,542 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select * from user_info where mobile=? 
+http-nio-8080-exec-1 2019-01-22 13:02:43,562 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 17610575922(String)
+http-nio-8080-exec-1 2019-01-22 13:02:43,583 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+http-nio-8080-exec-4 2019-01-22 14:05:22,184 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM user_info 
+http-nio-8080-exec-4 2019-01-22 14:05:22,188 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+http-nio-8080-exec-4 2019-01-22 14:05:22,193 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+http-nio-8080-exec-4 2019-01-22 14:05:22,196 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select * from user_info LIMIT ? 
+http-nio-8080-exec-4 2019-01-22 14:05:22,197 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 5(Integer)
+http-nio-8080-exec-4 2019-01-22 14:05:22,199 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 5

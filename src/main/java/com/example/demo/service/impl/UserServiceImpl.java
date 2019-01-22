@@ -19,7 +19,12 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public User getUserByUserId(int userId) {
-        return null;
+        return userMapper.getUserByUserId(userId);
+    }
+
+    @Override
+    public User getUserByMobile(String mobile){
+        return userMapper.getUserByMobile(mobile);
     }
 
     @Override

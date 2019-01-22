@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.Result.Result;
 import com.example.demo.domain.LearnResource;
 import com.example.demo.service.ILearnResourceService;
 import lombok.extern.slf4j.Slf4j;
@@ -59,8 +60,8 @@ public class LearnResourceController {
 
     @ResponseBody
     @GetMapping("/get/id")
-    public LearnResource getLearnResourceById( Integer id) {
-        return learnResourceService.getLearnResourceById(id);
+    public Result getLearnResourceById(Integer id) {
+        return Result.ok(learnResourceService.getLearnResourceById(id));
     }
 
 }

@@ -9,5 +9,7 @@ public interface IUserService {
 
     User getUserByUserId(int userId);
 
+    User getUserByMobile(String mobile);
+
     List<User> getAllUserList();
 }

@@ -1,20 +1,19 @@
 package com.example.demo;
 
-import com.alibaba.druid.pool.DruidDataSource;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.env.Environment;
 
 
 //@EnableConfigurationProperties({TestConfigBean.class, ConfigBean.class})//此注解用来指定用TestConfigBean，ConfigBean实体类来装载配置信息
 //若不指定，可在ConfigBean或TestConfigBean等配置文件中添加注解@Configuration
-@SpringBootApplication
-//@ComponentScan(basePackages = {"com.example.demo.dao"}) //@ComponentScan注解，找不到mapper
-@MapperScan("com.example.demo.dao") //@MapperScan与各mapper上添加@Mapper效果相同
+@SpringBootApplication  //@SpringBootApplication 相当于 @Configuration、@EnableAutoConfiguration 、 @ComponentScan 三个的作用
+//如果不使用@ComponentScan指明对象扫描范围，默认指扫描当前启动类所在的包里的对象
+//@ComponentScan(basePackages = {"com.example.demo.dao"})
+@MapperScan("com.example.demo.dao") //@MapperScan与各mapper上添加@Mapper效果相同,但与@ComponentScan不同
 public class DemoApplication {
     private static ApplicationContext context;
     private static Environment environment;

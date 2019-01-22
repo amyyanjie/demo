@@ -53,8 +53,6 @@
 		<appender-ref ref="baselog"/>
 	</logger>
 
-
-
 	<!--以下为多环境下logger节点配置-->
 	<!--<springProfile name="test,dev">-->
 		<!--<logger name="com.axt" level="DEBUG">-->

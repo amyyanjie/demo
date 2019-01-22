@@ -58,7 +58,7 @@ public class LearnResourceController {
     }
 
     @ResponseBody
-    @GetMapping("/get")
+    @GetMapping("/get/id")
     public LearnResource getLearnResourceById( Integer id) {
         return learnResourceService.getLearnResourceById(id);
     }

@@ -2,14 +2,20 @@ package com.example.demo.controller;
 
 import com.example.demo.config.ConfigBean;
 import com.example.demo.config.TestConfigBean;
+import com.example.demo.domain.User;
+import com.example.demo.service.IUserService;
 import com.example.demo.vars.DemoVars;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @Slf4j
+@RequestMapping("user")
 @RestController
 public class UserController {
     //通过注解@Value("${}")绑定到属性字段上
@@ -33,8 +39,8 @@ public class UserController {
 //   1. 获取@Value绑定的属性字段
 //    return name+property;
 
-        log.debug("name:{}",configBean.getName());
-        log.info("property:{}",testConfigBean.getProperty());
+        log.debug("name:{}", configBean.getName());
+        log.info("property:{}", testConfigBean.getProperty());
 //        2.注入配置信息实体类，获取属性
         return configBean.getName() + configBean.getProperty()
                 + configBean.getPasswd() + configBean.getAge();
@@ -50,4 +56,20 @@ public class UserController {
 //        return demoVars.getAge()+demoVars.getPasswd();
     }
 
+    @Autowired
+    private IUserService userService;
+
+    @GetMapping("get/list")
+    public PageInfo<User> getUserList(@RequestParam(defaultValue = "1", required = false) int pageNum,
+                                  @RequestParam(defaultValue = "5", required = false) int pageSize) {
+        PageHelper.startPage(pageNum, pageSize);
+        List<User> list = userService.getAllUserList();
+        PageInfo<User> pageInfo = new PageInfo<>(list);
+        return pageInfo;
+    }
+
+    @PostMapping(value = "/add")
+    public int addUser(@RequestBody User user) {
+        return userService.addUser(user);
+    }
 }

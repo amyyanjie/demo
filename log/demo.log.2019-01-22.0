@@ -1,0 +1,195 @@
+main 2019-01-22 09:38:05,415 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 2966 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-22 09:38:05,440 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-22 09:38:05,442 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-22 09:38:07,500 INFO (StartupInfoLogger.java:59)- Started DemoApplication in 2.533 seconds (JVM running for 3.313)
+http-nio-8080-exec-1 2019-01-22 09:38:15,637 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM user_info 
+http-nio-8080-exec-1 2019-01-22 09:38:15,655 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+http-nio-8080-exec-1 2019-01-22 09:38:15,681 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+http-nio-8080-exec-1 2019-01-22 09:38:15,684 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select * from user_info LIMIT ? 
+http-nio-8080-exec-1 2019-01-22 09:38:15,685 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 5(Integer)
+http-nio-8080-exec-1 2019-01-22 09:38:15,687 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+main 2019-01-22 09:55:02,978 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 3026 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-22 09:55:02,981 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-22 09:55:02,983 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-22 09:55:04,608 INFO (StartupInfoLogger.java:59)- Started DemoApplication in 1.931 seconds (JVM running for 2.395)
+main 2019-01-22 10:02:51,450 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 3061 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-22 10:02:51,454 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-22 10:02:51,456 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-22 10:02:53,071 INFO (StartupInfoLogger.java:59)- Started DemoApplication in 2.161 seconds (JVM running for 3.163)
+http-nio-8080-exec-2 2019-01-22 10:03:12,427 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: INSERT INTO user_info (name,idCardNo,mobile) VALUES ('王二','500238199308130720','17610575822') 
+http-nio-8080-exec-2 2019-01-22 10:03:12,453 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+http-nio-8080-exec-2 2019-01-22 10:03:12,460 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+main 2019-01-22 10:05:00,022 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 3068 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-22 10:05:00,025 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-22 10:05:00,027 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-22 10:05:01,596 INFO (StartupInfoLogger.java:59)- Started DemoApplication in 1.876 seconds (JVM running for 2.336)
+http-nio-8080-exec-1 2019-01-22 10:05:10,286 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: INSERT INTO user_info (name,idCardNo,mobile) VALUES (?,?,?) 
+http-nio-8080-exec-1 2019-01-22 10:05:10,304 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: null, null, null
+http-nio-8080-exec-1 2019-01-22 10:05:10,313 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+main 2019-01-22 10:05:41,328 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 3073 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-22 10:05:41,331 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-22 10:05:41,333 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-22 10:05:42,958 INFO (StartupInfoLogger.java:59)- Started DemoApplication in 1.928 seconds (JVM running for 2.375)
+main 2019-01-22 10:22:01,638 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 3143 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-22 10:22:01,641 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-22 10:22:01,642 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-22 10:22:03,251 INFO (StartupInfoLogger.java:59)- Started DemoApplication in 1.915 seconds (JVM running for 2.372)
+http-nio-8080-exec-9 2019-01-22 10:25:56,796 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: INSERT INTO user_info (name,idCardNo,mobile) VALUES (?,?,?) 
+http-nio-8080-exec-9 2019-01-22 10:25:56,819 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 王三(String), 500236199401011031(String), 17610575722(String)
+http-nio-8080-exec-9 2019-01-22 10:25:56,828 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+main 2019-01-22 10:27:23,392 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 3155 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-22 10:27:23,396 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-22 10:27:23,397 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-22 10:27:24,961 INFO (StartupInfoLogger.java:59)- Started DemoApplication in 1.888 seconds (JVM running for 2.478)
+http-nio-8080-exec-2 2019-01-22 10:27:33,274 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: INSERT INTO user_info (name,idCardNo,mobile) VALUES (?,?,?) 
+http-nio-8080-exec-2 2019-01-22 10:27:33,293 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 王三(String), 500236199401011031(String), 17610575722(String)
+http-nio-8080-exec-2 2019-01-22 10:27:33,299 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+http-nio-8080-exec-5 2019-01-22 10:32:40,295 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: INSERT INTO user_info (name,idCardNo,mobile) VALUES (?,?,?) 
+http-nio-8080-exec-5 2019-01-22 10:32:40,298 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 王四(String), 500236199401012296(String), 17610575622(String)
+http-nio-8080-exec-5 2019-01-22 10:32:40,305 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+http-nio-8080-exec-8 2019-01-22 10:33:57,806 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: INSERT INTO user_info (name,idCardNo,mobile) VALUES (?,?,?) 
+http-nio-8080-exec-8 2019-01-22 10:33:57,808 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 王六(String), 500236199401011779(String), 17610575422(String)
+http-nio-8080-exec-8 2019-01-22 10:33:57,809 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+http-nio-8080-exec-1 2019-01-22 10:45:33,278 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: INSERT INTO user_info (name,idCardNo,mobile) VALUES (?,?,?) 
+http-nio-8080-exec-1 2019-01-22 10:45:33,286 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 王七(String), 500236199401011816(String), 17610575322(String)
+http-nio-8080-exec-1 2019-01-22 10:45:33,294 DEBUG (BaseJdbcLogger.java:159)- <==    Updates: 1
+http-nio-8080-exec-4 2019-01-22 10:46:33,978 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM user_info 
+http-nio-8080-exec-4 2019-01-22 10:46:33,979 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+http-nio-8080-exec-4 2019-01-22 10:46:33,991 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+http-nio-8080-exec-4 2019-01-22 10:46:33,993 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select * from user_info LIMIT ? 
+http-nio-8080-exec-4 2019-01-22 10:46:33,994 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 5(Integer)
+http-nio-8080-exec-4 2019-01-22 10:46:33,998 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 5
+main 2019-01-22 10:48:54,597 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 3207 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-22 10:48:54,600 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-22 10:48:54,601 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-22 10:48:56,221 INFO (StartupInfoLogger.java:59)- Started DemoApplication in 1.919 seconds (JVM running for 2.381)
+http-nio-8080-exec-2 2019-01-22 10:49:02,040 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM user_info 
+http-nio-8080-exec-2 2019-01-22 10:49:02,060 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+http-nio-8080-exec-2 2019-01-22 10:49:02,083 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+http-nio-8080-exec-2 2019-01-22 10:49:02,085 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select * from user_info LIMIT ? 
+http-nio-8080-exec-2 2019-01-22 10:49:02,086 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 5(Integer)
+http-nio-8080-exec-2 2019-01-22 10:49:02,088 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 5
+main 2019-01-22 10:50:13,578 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 3218 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-22 10:50:13,581 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-22 10:50:13,583 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-22 10:50:15,138 INFO (StartupInfoLogger.java:59)- Started DemoApplication in 1.881 seconds (JVM running for 2.511)
+main 2019-01-22 12:02:56,493 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 3431 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-22 12:02:56,496 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-22 12:02:56,497 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-22 12:02:58,049 INFO (StartupInfoLogger.java:59)- Started DemoApplication in 1.878 seconds (JVM running for 2.5)
+http-nio-8080-exec-2 2019-01-22 12:03:21,503 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select * from user_info where mobile=? 
+http-nio-8080-exec-2 2019-01-22 12:03:21,522 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 17610575922(String)
+http-nio-8080-exec-2 2019-01-22 12:03:21,545 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+http-nio-8080-exec-4 2019-01-22 12:52:36,427 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select * from user_info where mobile=? 
+http-nio-8080-exec-4 2019-01-22 12:52:36,431 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 17610575922(String)
+http-nio-8080-exec-4 2019-01-22 12:52:36,444 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+http-nio-8080-exec-6 2019-01-22 12:55:24,442 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select * from user_info where mobile=? 
+http-nio-8080-exec-6 2019-01-22 12:55:24,445 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 17610575922(String)
+http-nio-8080-exec-6 2019-01-22 12:55:24,448 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+main 2019-01-22 13:00:26,634 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 3524 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-22 13:00:26,637 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-22 13:00:26,639 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-22 13:00:28,191 INFO (StartupInfoLogger.java:59)- Started DemoApplication in 1.893 seconds (JVM running for 2.523)
+http-nio-8080-exec-1 2019-01-22 13:01:50,868 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select * from user_info where mobile=? 
+http-nio-8080-exec-1 2019-01-22 13:01:50,887 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 17610575922(String)
+http-nio-8080-exec-1 2019-01-22 13:01:50,909 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+main 2019-01-22 13:02:30,342 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 3532 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-22 13:02:30,345 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-22 13:02:30,347 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-22 13:02:31,885 INFO (StartupInfoLogger.java:59)- Started DemoApplication in 1.868 seconds (JVM running for 2.498)
+http-nio-8080-exec-1 2019-01-22 13:02:43,542 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select * from user_info where mobile=? 
+http-nio-8080-exec-1 2019-01-22 13:02:43,562 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 17610575922(String)
+http-nio-8080-exec-1 2019-01-22 13:02:43,583 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+http-nio-8080-exec-4 2019-01-22 14:05:22,184 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: SELECT count(0) FROM user_info 
+http-nio-8080-exec-4 2019-01-22 14:05:22,188 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 
+http-nio-8080-exec-4 2019-01-22 14:05:22,193 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 1
+http-nio-8080-exec-4 2019-01-22 14:05:22,196 DEBUG (BaseJdbcLogger.java:159)- ==>  Preparing: select * from user_info LIMIT ? 
+http-nio-8080-exec-4 2019-01-22 14:05:22,197 DEBUG (BaseJdbcLogger.java:159)- ==> Parameters: 5(Integer)
+http-nio-8080-exec-4 2019-01-22 14:05:22,199 DEBUG (BaseJdbcLogger.java:159)- <==      Total: 5
+main 2019-01-22 15:06:01,004 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 3807 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-22 15:06:01,006 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-22 15:06:01,008 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-22 15:06:02,663 INFO (StartupInfoLogger.java:59)- Started DemoApplication in 1.959 seconds (JVM running for 2.411)
+main 2019-01-22 15:18:25,074 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 3843 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-22 15:18:25,078 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-22 15:18:25,079 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-22 15:18:26,798 INFO (StartupInfoLogger.java:59)- Started DemoApplication in 2.048 seconds (JVM running for 2.666)
+main 2019-01-22 15:23:23,588 INFO (StartupInfoLogger.java:50)- Starting DemoApplicationTests on yanjiedeMacBook-Pro.local with PID 3860 (started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-22 15:23:23,591 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-22 15:23:23,593 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-22 15:23:25,756 INFO (StartupInfoLogger.java:59)- Started DemoApplicationTests in 2.743 seconds (JVM running for 3.531)
+main 2019-01-22 15:24:49,224 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 3866 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-22 15:24:49,227 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-22 15:24:49,229 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-22 15:24:50,994 INFO (StartupInfoLogger.java:59)- Started DemoApplication in 2.078 seconds (JVM running for 2.526)
+main 2019-01-22 15:25:05,876 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 3870 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-22 15:25:05,879 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-22 15:25:05,881 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-22 15:25:07,550 INFO (StartupInfoLogger.java:59)- Started DemoApplication in 1.98 seconds (JVM running for 2.446)
+main 2019-01-22 15:31:34,100 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 3888 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-22 15:31:34,103 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-22 15:31:34,106 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-22 15:31:35,797 INFO (StartupInfoLogger.java:59)- Started DemoApplication in 2.05 seconds (JVM running for 2.722)
+main 2019-01-22 15:36:31,027 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 3906 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-22 15:36:31,036 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-22 15:36:31,038 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-22 15:36:32,656 INFO (StartupInfoLogger.java:59)- Started DemoApplication in 1.967 seconds (JVM running for 2.618)
+main 2019-01-22 15:45:01,176 INFO (StartupInfoLogger.java:50)- Starting DemoApplicationTests on yanjiedeMacBook-Pro.local with PID 3934 (started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-22 15:45:01,179 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-22 15:45:01,187 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-22 15:45:03,592 INFO (StartupInfoLogger.java:59)- Started DemoApplicationTests in 3.048 seconds (JVM running for 3.969)
+main 2019-01-22 15:46:54,312 INFO (StartupInfoLogger.java:50)- Starting DemoApplicationTests on yanjiedeMacBook-Pro.local with PID 3939 (started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-22 15:46:54,313 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-22 15:46:54,314 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-22 15:46:56,572 INFO (StartupInfoLogger.java:59)- Started DemoApplicationTests in 2.664 seconds (JVM running for 3.429)
+main 2019-01-22 15:57:09,675 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 3969 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-22 15:57:09,678 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-22 15:57:09,680 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-22 15:57:11,290 INFO (StartupInfoLogger.java:59)- Started DemoApplication in 1.96 seconds (JVM running for 2.59)
+main 2019-01-22 15:58:32,380 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 3981 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-22 15:58:32,384 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-22 15:58:32,385 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-22 15:58:34,018 INFO (StartupInfoLogger.java:59)- Started DemoApplication in 1.949 seconds (JVM running for 2.401)
+main 2019-01-22 15:59:29,331 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 3985 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-22 15:59:29,335 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-22 15:59:29,336 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-22 15:59:31,136 INFO (StartupInfoLogger.java:59)- Started DemoApplication in 2.153 seconds (JVM running for 2.832)
+main 2019-01-22 16:03:53,209 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 3995 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-22 16:03:53,212 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-22 16:03:53,213 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-22 16:03:54,990 INFO (StartupInfoLogger.java:59)- Started DemoApplication in 2.125 seconds (JVM running for 2.71)
+main 2019-01-22 18:36:10,330 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 4479 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-22 18:36:10,333 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-22 18:36:10,335 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-22 18:36:28,612 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 4482 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-22 18:36:28,615 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-22 18:36:28,617 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-22 18:38:16,189 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 4491 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-22 18:38:16,192 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-22 18:38:16,194 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-22 18:41:46,772 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 4510 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-22 18:41:46,776 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-22 18:41:46,778 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-22 18:45:35,512 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 4528 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-22 18:45:35,515 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-22 18:45:35,517 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-22 19:39:20,728 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 4660 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-22 19:39:20,733 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-22 19:39:20,735 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-22 19:42:01,881 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 4670 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-22 19:42:01,884 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-22 19:42:01,885 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-22 20:14:11,647 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 4729 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-22 20:14:11,652 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-22 20:14:11,654 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-22 20:15:19,116 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 4733 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-22 20:15:19,119 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-22 20:15:19,121 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-22 20:17:26,091 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 4740 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-22 20:17:26,096 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-22 20:17:26,098 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-22 20:17:27,680 INFO (StartupInfoLogger.java:59)- Started DemoApplication in 1.917 seconds (JVM running for 2.545)
+main 2019-01-22 20:22:18,265 INFO (StartupInfoLogger.java:50)- Starting DemoApplication on yanjiedeMacBook-Pro.local with PID 4764 (/Users/yanjie/Public/learn/demo/target/classes started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-22 20:22:18,267 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-22 20:22:18,269 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-22 20:22:19,825 INFO (StartupInfoLogger.java:59)- Started DemoApplication in 1.906 seconds (JVM running for 2.589)

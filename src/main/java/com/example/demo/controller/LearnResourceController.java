@@ -1,7 +1,6 @@
 package com.example.demo.controller;
 
 import com.example.demo.Result.Result;
-import com.example.demo.domain.DateFormatTest;
 import com.example.demo.domain.LearnResource;
 import com.example.demo.service.ILearnResourceService;
 import lombok.extern.slf4j.Slf4j;
@@ -12,9 +11,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.*;
 
 @Controller
@@ -63,31 +59,5 @@ public class LearnResourceController {
         return Result.ok(learnResourceService.getLearnResourceById(id));
     }
 
-    @GetMapping("/test/get")
-    @ResponseBody
-    public Result getTime() {
-        Map<String, Object> map = new HashMap<>();
-        map.put("localDateTime", LocalDateTime.now());//2019-01-22T15:06:52.441
-        map.put("testEmpty", ""); //jackson配置后不会返回
-        map.put("testNull", null);
-        map.put("strTime", "2019-01-22");
-        Date date = new Date();
-        map.put("newDate", date);
-        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        map.put("formatDate", df.format(date));
-        System.out.println(df.format(date));
-        return Result.ok(map);
-    }
-
-    @PostMapping("test/set")
-    @ResponseBody
-    public Result setTime(@RequestBody DateFormatTest test) {
-        Map<String, Object> map = new HashMap<>();
-        map.put("dateProperties", test.getDateProperties()); //输出格式为str类型
-        map.put("localDateTime", LocalDateTime.now());//2019-01-22T15:06:52.441
-        map.put("intProperties", test.getIntProperties());
-        map.put("strProperties", test.getStrProperties());
-        return Result.ok(map);
-    }
 
 }

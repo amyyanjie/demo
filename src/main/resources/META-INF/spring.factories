@@ -1,0 +1,6 @@
+# Auto Configure
+#org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+#  com.example.demo.config
+
+#META-INF/spring.factories作用：
+#

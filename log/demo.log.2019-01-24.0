@@ -1,0 +1,8 @@
+main 2019-01-24 17:00:05,051 INFO (StartupInfoLogger.java:50)- Starting DemoApplicationTests on yanjiedeMacBook-Pro.local with PID 3137 (started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-24 17:00:05,054 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-24 17:00:05,056 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-24 17:00:07,437 INFO (StartupInfoLogger.java:59)- Started DemoApplicationTests in 2.936 seconds (JVM running for 3.868)
+main 2019-01-24 17:08:52,693 INFO (StartupInfoLogger.java:50)- Starting DemoApplicationTests on yanjiedeMacBook-Pro.local with PID 3160 (started by yanjie in /Users/yanjie/Public/learn/demo)
+main 2019-01-24 17:08:52,695 DEBUG (StartupInfoLogger.java:53)- Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+main 2019-01-24 17:08:52,697 INFO (SpringApplication.java:675)- No active profile set, falling back to default profiles: default
+main 2019-01-24 17:08:54,891 INFO (StartupInfoLogger.java:59)- Started DemoApplicationTests in 2.839 seconds (JVM running for 3.644)

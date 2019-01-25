@@ -4,6 +4,7 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ApplicationContext;
 import org.springframework.core.env.Environment;
 
@@ -19,11 +20,24 @@ public class DemoApplication {
     private static Environment environment;
 
     public static void main(String[] args) {
+        /*1.默认写法*/
         context = SpringApplication.run(DemoApplication.class, args);
-//      context=new SpringApplicationBuilder(DemoApplication.class)
-//              .properties("spring.application.name=demo").properties("server.port=8080")
-//              .run(args);
+        /*2.通过SpringApplicationBuilder链式调用*/
+//        context = new SpringApplicationBuilder(DemoApplication.class)
+//                .properties("spring.application.name=demo").properties("server.port=8080")
+//                .run(args);
         //这里设置properties与在.properties配置文件中设置效果相同，但.properties优先级要高于这里
+        /*3.提供兼容之前的版本的方法*/
+        /**
+         * The sources that will be used to create an ApplicationContext. A valid source * is one of: a class, class name, package, package name, or an XML resource
+         * location.
+         */
+//        SpringApplication springApplication = new SpringApplication();
+//        Set<String> sources = new TreeSet<>();
+//        sources.add(DemoApplication.class.getName());
+//        springApplication.setSources(sources);
+//        context = springApplication.run(args);
+
         environment = context.getEnvironment();
         //可以通过environment.getProperty("")获取application.properties相应配置
         System.out.println(environment.getProperty("spring.datasource.maxActive"));
@@ -60,5 +74,6 @@ public class DemoApplication {
 //        dataSource.setPoolPreparedStatements(false);//是否缓存preparedStatement，也就是PSCache
 //        return dataSource;
 //    }
+
 }
 

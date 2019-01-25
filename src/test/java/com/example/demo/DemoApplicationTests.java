@@ -27,6 +27,9 @@ public class DemoApplicationTests {
 
     @Test
     public void contextLoads() {
+
+        System.out.println("org.springframework.web.servlet.DispatcherServlet".lastIndexOf(46));
+        System.out.println("org.springframework".lastIndexOf(100));
     }
 
     @Test

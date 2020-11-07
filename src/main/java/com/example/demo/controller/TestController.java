@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.Result.Result;
 import com.example.demo.domain.DateFormatTest;
+import org.springframework.util.StopWatch;
 import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
@@ -52,4 +53,14 @@ public class TestController {
         map.put("bigDecimal", bigDecimal);
         return Result.ok(map);
     }
+
+    @GetMapping("/stackTrace")
+    public Result testStackTrace() {
+        //获取堆栈轨迹
+        StackTraceElement[] stackTraceElements;
+        stackTraceElements = new RuntimeException().getStackTrace();
+        return Result.ok(stackTraceElements);
+    }
+
+
 }

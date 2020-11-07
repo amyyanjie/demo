@@ -10,7 +10,9 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.util.StopWatch;
 
+import java.net.URLEncoder;
 import java.util.Date;
 import java.util.List;
 import java.util.TimeZone;
@@ -27,7 +29,8 @@ public class DemoApplicationTests {
 
     @Test
     public void contextLoads() {
-
+        String url=URLEncoder.encode("/activity/goldCoin2018.html");
+        System.out.println(url);
         System.out.println("org.springframework.web.servlet.DispatcherServlet".lastIndexOf(46));
         System.out.println("org.springframework".lastIndexOf(100));
     }
@@ -60,5 +63,26 @@ public class DemoApplicationTests {
         System.out.println("setAfter" + TimeZone.getDefault()); //输出验证
     }
 
+    @Test
+    public void testStopWatch() throws Exception {
+        StopWatch stopWatch = new StopWatch();
+        stopWatch.start("morning");
+        System.out.println("1:" + stopWatch.currentTaskName());
+        Thread.sleep(2000);
+        stopWatch.stop();
+        stopWatch.start("afternoon");
+        System.out.println("2:" + stopWatch.currentTaskName());
+        Thread.sleep(1000);
+        stopWatch.stop();
+        stopWatch.start("evening");
+        System.out.println("3:" + stopWatch.currentTaskName());
+        Thread.sleep(3000);
+        stopWatch.stop();
+        System.out.println(stopWatch.prettyPrint());
+        System.out.println(stopWatch.getLastTaskName());
+        System.out.println(stopWatch.getLastTaskInfo());
+        System.out.println(stopWatch.getTaskCount());
+        System.out.println(stopWatch.getTotalTimeMillis());
+    }
 }
 

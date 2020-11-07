@@ -8,7 +8,6 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ApplicationContext;
 import org.springframework.core.env.Environment;
 
-
 //@EnableConfigurationProperties({TestConfigBean.class, ConfigBean.class})//此注解用来指定用TestConfigBean，ConfigBean实体类来装载配置信息
 //若不指定，可在ConfigBean或TestConfigBean等配置文件中添加注解@Configuration
 @SpringBootApplication  //@SpringBootApplication 相当于 @Configuration、@EnableAutoConfiguration 、 @ComponentScan 三个的作用
@@ -23,25 +22,40 @@ public class DemoApplication {
         /*1.默认写法*/
         context = SpringApplication.run(DemoApplication.class, args);
         /*2.通过SpringApplicationBuilder链式调用*/
-//        context = new SpringApplicationBuilder(DemoApplication.class)
-//                .properties("spring.application.name=demo").properties("server.port=8080")
+//        context = new SpringApplicationBuilder()
+//                .sources(DemoApplication.class)  //等同于new SpringApplicationBuilder(DemoApplication.class)
+//                .profiles("pro")
+//                .properties("spring.application.name=demo").properties("server.port=8080")//与在application.properties里配置作用等同，优先级低于application.properties
 //                .run(args);
-        //这里设置properties与在.properties配置文件中设置效果相同，但.properties优先级要高于这里
+        //可以通过.set方式添加配置。但建议用Builder设计模式
+//        SpringApplication springApplication=new SpringApplication();
+//        springApplication.setSources(Collections.singleton(DemoApplication.class.getName()));
+//        springApplication.setAdditionalProfiles("pro");
+//        springApplication.run(args);
+
         /*3.提供兼容之前的版本的方法*/
         /**
          * The sources that will be used to create an ApplicationContext. A valid source * is one of: a class, class name, package, package name, or an XML resource
          * location.
          */
 //        SpringApplication springApplication = new SpringApplication();
+//        springApplication.setAdditionalProfiles("pro");
 //        Set<String> sources = new TreeSet<>();
 //        sources.add(DemoApplication.class.getName());
 //        springApplication.setSources(sources);
 //        context = springApplication.run(args);
 
+
+
+
+
         environment = context.getEnvironment();
         //可以通过environment.getProperty("")获取application.properties相应配置
         System.out.println(environment.getProperty("spring.datasource.maxActive"));
         System.out.println(environment.getProperty("spring.datasource.maxWait"));
+        System.out.println(System.getProperty("java.awt.headless"));
+        String property=System.setProperty("java.awt.headless", System.getProperty("java.awt.headless", Boolean.toString(true)));
+        System.out.println(property);
     }
 
     public static ApplicationContext getContext() {

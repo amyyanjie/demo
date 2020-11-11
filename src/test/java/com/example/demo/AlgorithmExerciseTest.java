@@ -7,11 +7,7 @@ package com.example.demo;
  */
 public class AlgorithmExerciseTest {
 
-    public static void main(String[] args) {
-
-    }
-
-    public class ListNode {
+    public static class ListNode {
         int val;
         ListNode next;
 
@@ -21,19 +17,19 @@ public class AlgorithmExerciseTest {
     }
 
 
-    //给定一个链表: 1->2->3->4->5, 和 k = 2.
-    //返回链表 4->5.
-    public ListNode getKthFromEnd(ListNode head, int k) {
-        //两个相隔 k-1 的指针
-        ListNode fir = head;
-        ListNode sec = head;
-        for (int i = 1; i < k; i++) {
-            fir = fir.next;
-        }
-        while (fir.next != null) {
-            fir = fir.next;
-            sec = sec.next;
-        }
-        return sec;
+    public static void main(String[] args) {
+        ListNode l1 = new ListNode(0);
+        l1.next = new ListNode(1);
+        l1.next.next = new ListNode(2);
+
     }
+
+
+
+
+
+
+
+
+
 }

@@ -1,4 +1,4 @@
-package com.example.demo.test;
+package com.example.demo.demos;
 
 import com.example.demo.domain.User;
 

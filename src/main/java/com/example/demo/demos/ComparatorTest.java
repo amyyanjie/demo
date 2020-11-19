@@ -10,6 +10,13 @@ import java.util.*;
  * @Date: 2020/11/11 15:50
  */
 public class ComparatorTest {
+    private final String m;
+
+    private final int b;
+    public ComparatorTest(int b) {
+        this.m = "2";
+        this.b = b;
+    }
 
     //自定义比较器
     public static class UserComparator implements Comparator<User> {

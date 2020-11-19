@@ -16,13 +16,6 @@ public class AlgorithmExerciseTest {
         }
     }
 
-    public static void main(String[] args) {
-        ListNode l1 = new ListNode(1);
-        l1.next = new ListNode(2);
-        l1.next.next = new ListNode(3);
-        l1.next.next.next = new ListNode(4);
-        l1.next.next.next.next=new ListNode(5);
-    }
 
     // -1->1->2->3->4->2
     public ListNode removeElements(ListNode head, int val) {
@@ -41,34 +34,52 @@ public class AlgorithmExerciseTest {
         return res.next;
     }
 
+    public static void main(String[] args) {
+        ListNode l1 = new ListNode(1);
+        l1.next = new ListNode(2);
+        l1.next.next = new ListNode(3);
+        l1.next.next.next = new ListNode(4);
+        l1.next.next.next.next = new ListNode(5);
+        ListNode l2 = reverseBetween(l1, 1, 4);
+        System.out.println(l2.val);
+        System.out.println(l2.next.val);
+        System.out.println(l2.next.next.val);
+        System.out.println(l2.next.next.next.val);
+        System.out.println(l2.next.next.next.next.val);
+
+
+    }
+
     //反转从位置 m 到 n 的链表。请使用一趟扫描完成反转。
     //输入: 1->2->3->4->5->NULL, m = 2, n = 4
     //输出: 1->4->3->2->5->NULL
     //1 ≤ m ≤ n ≤ 链表长度
-    public ListNode reverseBetween(ListNode head, int m, int n) {
-        ListNode rev = null;
-        int i = 1;
-        ListNode pre = null;
-        ListNode l =head;
-        ListNode res = head;
-        while (i <= n) {
-            if (i >= m) {
-                ListNode temp = l.next;
-                rev = l;
-                rev.next = pre;
-                pre = rev;
-                l = temp;
-            } else {
-                l = l.next;
-            }
+    public static ListNode reverseBetween(ListNode head, int m, int n) {
 
+        // 先找到反转链表头的前一节点 con，即m的前一节点
+        ListNode cur = head;
+        for (int i = 2; i < m; i++) {
+            cur = cur.next;
         }
+        // prev前驱节点，cur当前节点
+        ListNode con = cur;
+        ListNode prev = cur.next;
+        ListNode tail = cur.next;
 
+        // 反转m到n
+        for (int j = m; j <= n; j++) {
+            ListNode tempNext = cur.next;
+            cur.next = prev;
+            prev = cur;
+            cur = tempNext;
+        }
+        // 将三部分连接
 
-        return null;
+        tail.next = cur;
+
+        con.next = prev;
+        return head;
     }
-
-
 
 
 }

@@ -46,8 +46,6 @@ public class AlgorithmExerciseTest {
         System.out.println(l2.next.next.val);
         System.out.println(l2.next.next.next.val);
         System.out.println(l2.next.next.next.next.val);
-
-
     }
 
     //反转从位置 m 到 n 的链表。请使用一趟扫描完成反转。
@@ -80,6 +78,25 @@ public class AlgorithmExerciseTest {
         con.next = prev;
         return head;
     }
+    //            if (nums[i] == 0) {
+    //                if (nums[j] == 0){
+    //                    j++;
+    //                } else {
+    //                    nums[i] == nums[j];
+    //                    nums[j] == 0;
+    //                    i++;
+    //                    j++;
+    //                }
+    //            }else {
+    //                // i不为0
+    //                if (nums[j] == 0){
+    //                    i++;
+    //                    j++;
+    //                }else {
+    //                    i++;
+    //                    j++;
+    //
+    //                }
 
 
 }

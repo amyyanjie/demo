@@ -11,11 +11,15 @@ public class ThreadLocalDemo {
      * 使⽤ InheritableThreadLocal 可以实现多个线程访问`ThreadLocal`的值
      */
     private static void test() {
-        final ThreadLocal<String> threadLocal = new InheritableThreadLocal<>();
+        final ThreadLocal<String> inheritableThreadLocal = new InheritableThreadLocal<>();
+        final ThreadLocal<String> threadLocal=new ThreadLocal<>();
 
-        threadLocal.set("test_1");
+        inheritableThreadLocal.set("test_inheritableThreadLocal");
+        threadLocal.set("test_threadLocal");
+        System.out.println("主线程中 inheritableThreadLocal 值："+inheritableThreadLocal.get());
+        System.out.println("主线程中 threadLocal 值："+threadLocal.get());
         Thread t = new Thread(() -> {
-            System.out.println(threadLocal.get());
+            System.out.println("t线程中 inheritableThreadLocal 值"+inheritableThreadLocal.get());
         });
         t.start();
     }

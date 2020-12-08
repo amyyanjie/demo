@@ -35,6 +35,11 @@
 	<!--logback的配置，需要配置输出源appender，打日志的logger（子节点）和root（根节点），
 	实际上，它输出日志是从子节点开始，子节点如果有输出源直接输入，
 	如果无，判断配置的addtivity，是否像上级传递，即是否向root传递，传递则采用root的输出源，否则不输出日志。-->
+
+	<!--additivity 的作用在于当前 logger 是否使用上级 logeer（一般是 root logger）配置的 appender 进行输出。
+	false：表示只用当前 logger 的 appender-ref。
+	true：表示当前 logger 的 appender-ref 和 rootLogger 的 appender-ref 都有效。-->
+
 	<root level="info">
 		<!--表示把>=info级别输出到控制台-->
 		<!--控制台输出第一次-->

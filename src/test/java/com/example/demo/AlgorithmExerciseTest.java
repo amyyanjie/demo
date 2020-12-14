@@ -1,5 +1,13 @@
 package com.example.demo;
 
+import com.fasterxml.jackson.core.sym.NameN;
+
+import java.util.*;
+import java.util.function.Supplier;
+import java.util.stream.IntStream;
+import java.util.stream.LongStream;
+import java.util.stream.Stream;
+
 /**
  * @Author: yanjie
  * @Description:
@@ -7,6 +15,9 @@ package com.example.demo;
  */
 public class AlgorithmExerciseTest {
 
+    /**
+     * 链表结构
+     */
     public static class ListNode {
         int val;
         ListNode next;
@@ -16,36 +27,44 @@ public class AlgorithmExerciseTest {
         }
     }
 
+    /**
+     * 树结构
+     */
+    public static class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
 
-    // -1->1->2->3->4->2
-    public ListNode removeElements(ListNode head, int val) {
-        ListNode res = new ListNode(-1);//哑结点，可以不用专门讨论删除头节点的情况
-        res.next = head;
-        ListNode pre = res;   //前继指针
-        ListNode cur = head;  //当前指针
-        while (cur != null) {
-            if (cur.val == val) { // 若当前节点cur需删除，将前继指针pre指向当前节点cur的下一节点，cur向前移动一步。
-                pre.next = cur.next;
-            } else { // 若当前节点不需删除，pre和cur向前移动一步。
-                pre = pre.next;
-            }
-            cur = cur.next;
+        TreeNode(int x) {
+            val = x;
         }
-        return res.next;
     }
 
-    public static void main(String[] args) {
-        ListNode l1 = new ListNode(1);
-        l1.next = new ListNode(2);
-        l1.next.next = new ListNode(3);
-        l1.next.next.next = new ListNode(4);
-        l1.next.next.next.next = new ListNode(5);
-        ListNode l2 = reverseBetween(l1, 1, 4);
-        System.out.println(l2.val);
-        System.out.println(l2.next.val);
-        System.out.println(l2.next.next.val);
-        System.out.println(l2.next.next.next.val);
-        System.out.println(l2.next.next.next.next.val);
+    /**
+     * 双向链表，如LinkedList的底层结构
+     */
+//    public static class Node<E> {
+//        E item;
+//        Node<E> next;
+//        Node<E> prev;
+//
+//        Node(E element, Node<E> next, Node<E> prev) {
+//            this.item = element;
+//            this.next = next;
+//            this.prev = prev;
+//        }
+//    }
+
+    public static class Node {
+        int val;
+        Node next;
+        Node random;
+
+        Node(int x) {
+            this.val = x;
+            this.next = null;
+            this.random = null;
+        }
     }
 
     //反转从位置 m 到 n 的链表。请使用一趟扫描完成反转。
@@ -64,7 +83,7 @@ public class AlgorithmExerciseTest {
         ListNode prev = cur.next;
         ListNode tail = cur.next;
 
-        // 反转m到n
+        // 反转 m 到 n
         for (int j = m; j <= n; j++) {
             ListNode tempNext = cur.next;
             cur.next = prev;
@@ -78,25 +97,41 @@ public class AlgorithmExerciseTest {
         con.next = prev;
         return head;
     }
-    //            if (nums[i] == 0) {
-    //                if (nums[j] == 0){
-    //                    j++;
-    //                } else {
-    //                    nums[i] == nums[j];
-    //                    nums[j] == 0;
-    //                    i++;
-    //                    j++;
-    //                }
-    //            }else {
-    //                // i不为0
-    //                if (nums[j] == 0){
-    //                    i++;
-    //                    j++;
-    //                }else {
-    //                    i++;
-    //                    j++;
+
+    //"RDDR"
+    //DRRDRDRDRDDRDRDR
     //
-    //                }
+    //
+    public static String predictPartyVictory(String senate) {
+        int sum = 0;
+        int length = senate.length();
+        // 尽可能消灭异己，要消灭最近的异党
+        // 双指针， i
+
+        // R 表示成 -1，D 表示成 1。
+        //
+        for (int i = 0; i < length; i++) {
+
+            sum += senate.charAt(i) == 'R' ? -1 : 1;
+        }
+        // 若是结果 =0，最后一个是 D，则 R 赢
+        if (sum == 0) {
+            return senate.charAt(0) == 'D' ? "Dire" : "Radiant";
+        }
+        return sum < 0 ? "Radiant" : "Dire";
+    }
+
+
+    public static void main(String[] args) {
+        // 第一轮投完: DRRRRDDD 第二轮: DRRR 第三轮: RR
+        // DRRDRDRD
+        System.out.println(predictPartyVictory("DRRDRDRD RDDRDRDR"));
+    }
+
+
+
+
+
 
 
 }

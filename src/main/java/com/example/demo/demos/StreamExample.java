@@ -31,14 +31,24 @@ import java.util.stream.Stream;
  * @Date: 2020/12/10 15:13
  */
 public class StreamExample {
-    /**
-     * 通过 Supplier 创建 Stream，会不断调用 Supplier.get() 来不断生成下一个元素。调用 limit() 截取前面若干元素，变成有限序列。
-     * 编写一个能输出斐波拉契数列（Fibonacci）的 LongStream
-     */
-    // 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
-    public static void fibonacci(int n) {
-        Stream<Long> stream = Stream.generate(new FibonacciSupplier());//stream的转换不会触发任何计算，这里不会打印get()中的：调用get
-        stream.limit(n).forEach(System.out::println);//这里会先打印：调用get，再输出 n。
+
+    public static void createStream() {
+        /* 1.Stream.of() 静态方法，创建能输出确定元素的 Stream*/
+        Stream<String> stream1 = Stream.of("A", "B", "C", "D");
+        stream1.forEach(System.out::println);// foreach，可传入符合Consumer接口的void accept(T t)的方法引用
+        /* 2.基于数组或 Collection*/
+        String[] array = new String[]{"A", "B", "C"};
+        Stream<String> stream2 = Arrays.stream(array); // 把数组变成 Stream 使用 Arrays.stream() 方法
+        List<String> list = new ArrayList<>();list.add("D");
+        Stream<String> stream3 = list.stream(); // 对于 Collection（List、Set、Queue 等），直接调用 stream() 方法就可以获得 Stream。
+
+        /* 3.基过 Supplier 创建 Stream*/
+        // 创建 Stream 还可以通过 Stream.generate() 方法，它需要传入一个 Supplier 对象：
+        // 基于 Supplier 创建的 Stream 会不断调用 Supplier.get() 方法来不断产生下一个元素，这种 Stream 保存的不是元素，而是算法，它可以用来表示无限序列。
+        // 调用 limit() 截取前面若干元素，变成有限序列。
+        // 例如，编写一个能输出斐波拉契数列（Fibonacci）的 LongStream：// 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
+        Stream<Long> stream = Stream.generate(new FibonacciSupplier());// stream的转换不会触发任何计算，这里不会打印get()中的：调用get
+        stream.limit(5).forEach(System.out::println);// 这里会先打印：调用get，再输出 n。
     }
     public static class FibonacciSupplier implements Supplier<Long> {
         long a = 1; // 1, 0, 1, 1, 2, 3, 5
@@ -166,9 +176,7 @@ public class StreamExample {
     public static void main(String[] args) {
 
         Stream<String> stream2 = Stream.of("Apple", "Banana", "Blackberry", "Coconut", "Avocado", "Cherry", "Apricots");
-//        Map<String, List<String>> group = stream2.collect(Collectors.groupingBy(s -> s.substring(0, 1), Collectors.toList()));
-        Map<String, List<String>> group1 = stream2.collect(Collectors.groupingBy(s -> s.substring(0, 1)));
-//        group.forEach((k, v) -> System.out.println(k + "=" + v));
-        System.out.println(group1);
+        String m = stream2.filter(s -> s.startsWith("A")).findFirst().map(String::toLowerCase).orElse("null");
+        System.out.println(m);
     }
 }

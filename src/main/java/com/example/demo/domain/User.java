@@ -18,4 +18,11 @@ public class User implements Serializable {
     public User(int userId) {
         this.userId = userId;
     }
+
+    public User(int userId, String name, String idCardNo, String mobile) {
+        this.userId = userId;
+        this.name = name;
+        this.idCardNo = idCardNo;
+        this.mobile = mobile;
+    }
 }

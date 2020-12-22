@@ -2,6 +2,7 @@ package com.example.demo.demos;
 
 import com.example.demo.utils.StringUtil;
 
+import java.math.BigDecimal;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.util.*;
@@ -49,6 +50,12 @@ public class StreamExample {
         // 例如，编写一个能输出斐波拉契数列（Fibonacci）的 LongStream：// 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
         Stream<Long> stream = Stream.generate(new FibonacciSupplier());// stream的转换不会触发任何计算，这里不会打印get()中的：调用get
         stream.limit(5).forEach(System.out::println);// 这里会先打印：调用get，再输出 n。
+
+        /*4、基本类型的 Stream*/
+        // 使用 Stream<Integer> 会产生频繁的装箱、拆箱操作
+        // 为了提高效率，Java 标准库提供了 IntStream、LongStream 和 DoubleStream 这三种使用基本类型的 Stream。
+        IntStream intStream = IntStream.of(1, 2, 3);
+        IntStream intStream1 = Arrays.stream(new int[]{1, 2, 3});
     }
     public static class FibonacciSupplier implements Supplier<Long> {
         long a = 1; // 1, 0, 1, 1, 2, 3, 5
@@ -177,6 +184,22 @@ public class StreamExample {
 
         Stream<String> stream2 = Stream.of("Apple", "Banana", "Blackberry", "Coconut", "Avocado", "Cherry", "Apricots");
         String m = stream2.filter(s -> s.startsWith("A")).findFirst().map(String::toLowerCase).orElse("null");
-        System.out.println(m);
+//        System.out.println(m);
+
+        Stream.of("apple", "apple", " banana", "Pear", "ORANGE").distinct().forEach(System.out::println);
+
+        String[][] level_Info = {{"1", "10000"}, {"2", "50000"}, {"3", "100000"},
+                {"4", "500000"}, {"5", "1000000"}, {"6", "5000000"}};
+
+        BigDecimal amount = new BigDecimal("999");
+        String grade = Arrays.stream(level_Info).filter(info -> new BigDecimal(info[1]).compareTo(amount) > 0).findFirst().map(info -> info[0]).orElse("0");
+        List list = Stream.of(level_Info).sorted((o1, o2) -> new BigDecimal(o2[0]).compareTo(new BigDecimal(o1[0]))).map(info -> info[0]).collect(Collectors.toList());
+        System.out.println(list);
+
+        Stream.of("a","b","c").peek(i-> System.out.println("peek"+i)).forEach(System.out::println);
+
+        Thread parser2 = new Thread(() -> {
+            System.out.println("parser2 working");
+        });
     }
 }

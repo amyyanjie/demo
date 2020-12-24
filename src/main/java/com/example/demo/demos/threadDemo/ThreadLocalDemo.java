@@ -1,5 +1,9 @@
 package com.example.demo.demos;
 
+import java.util.concurrent.SynchronousQueue;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
+
 /**
  * @Author: yanjie
  * @Description:
@@ -26,5 +30,6 @@ public class ThreadLocalDemo {
 
     public static void main(String[] args) {
         test();
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(1, 2, 60, TimeUnit.SECONDS, new SynchronousQueue<>());
     }
 }

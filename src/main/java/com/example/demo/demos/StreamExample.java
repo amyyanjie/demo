@@ -6,6 +6,8 @@ import java.math.BigDecimal;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.util.*;
+import java.util.function.Consumer;
+import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -84,6 +86,42 @@ public class StreamExample {
                 .map(LocalDate::parse)
                 .forEach(System.out::println);
     }
+
+    /**
+     * Stream 的 map, foreach, peek 的区别？
+     */
+    public static void mapAndForeachAndPeek() {
+        // map 入参是 Function 接口函数，返回自定义流
+        // foreach 入参是 Consumer 接口函数，会中断流
+        // peak 入参是 Consumer 接口函数，不会中断流，后面可以对流继续操作，在debug 场景比较方便
+        Stream.of("apple ", " banana", "Pear", "ORANGE")
+                .map(new Function<String, String>() { // Function 函数，有入参有出参，返回自定义流，此时不会触发计算
+                    @Override
+                    public String apply(String i) {
+                        return i.toLowerCase() + ",";
+                    }
+                })
+                .peek(new Consumer<String>() { // Consumer 函数，有入参无出参，不会中断流，后面可以对流继续操作
+                    @Override
+                    public void accept(String s) {
+                        System.out.println(s);
+                    }
+                })
+                .forEach(new Consumer<String>() { // Consumer 函数，有入参无出参，会中断流。
+                    @Override
+                    public void accept(String s) {
+                        System.out.println("fruit:" + s);
+                    }
+                });
+
+
+        //以下为简写：
+        Stream.of("apple ", " banana", "Pear", "ORANGE")
+                .map(i -> i.toLowerCase() + ",")
+                .peek(System.out::println)
+                .forEach(s -> System.out.println("fruit:" + s));
+    }
+
 
     /**
      * filter() 方法用于对 Stream 的每个元素进行测试，符合条件的元素被过滤后生成一个新的 Stream
@@ -198,8 +236,6 @@ public class StreamExample {
 
         Stream.of("a","b","c").peek(i-> System.out.println("peek"+i)).forEach(System.out::println);
 
-        Thread parser2 = new Thread(() -> {
-            System.out.println("parser2 working");
-        });
+        mapAndForeachAndPeek();
     }
 }

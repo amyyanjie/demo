@@ -44,7 +44,7 @@ public class FunctionalInterfaceExample {
         // Optional 对象的 orElseGet 和 orElseThrow 方法
         User user = null;
         user = Optional.ofNullable(user).orElseGet(User::new);
-        Optional.ofNullable(user).orElseThrow(() -> new IllegalArgumentException("user is null"));
+        user = Optional.ofNullable(user).orElseThrow(() -> new IllegalArgumentException("user is null"));
     }
 
     /**

@@ -31,7 +31,7 @@ public class ThreadPoolExecutorDemo {
 
     public static void testDynamicModifyExecutor() {
         for (int i = 0; i < 15; i++) {
-            executor.submit(() -> { // 15个耗时10秒的任务
+            Future f = executor.submit(() -> { // 15个耗时10秒的任务
                 printThreadPoolStatus(executor, "创建任务");
                 try {
                     TimeUnit.SECONDS.sleep(10); //Thread.sleep(ms, ns);

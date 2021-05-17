@@ -11,11 +11,12 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+import java.util.stream.LongStream;
 import java.util.stream.Stream;
 
 /**
  * @Author: yanjie
- * @Description: Stream
+ * @Description: Stream，代表的任意java对象的序列。
  * 一、转换操作：把一个 stream 转换成另一个 stream，如 map(),filter()。转换操作不会触发任何计算。转换操作只是保存转换规则。
  * 二、聚合操作：对 stream 的每个元素进行计算，得到一个确定结果，如 reduce()
  * 三、其他：sorted()、distinct()、skip()、limit()、Stream.concat(s1, s2)、flatMap()、parallel()、forEach()...
@@ -45,10 +46,10 @@ public class StreamExample {
         List<String> list = new ArrayList<>();list.add("D");
         Stream<String> stream3 = list.stream(); // 对于 Collection（List、Set、Queue 等），直接调用 stream() 方法就可以获得 Stream。
 
-        /* 3.基过 Supplier 创建 Stream*/
+        /* 3.通过 Supplier 创建 Stream*/
         // 创建 Stream 还可以通过 Stream.generate() 方法，它需要传入一个 Supplier 对象：
         // 基于 Supplier 创建的 Stream 会不断调用 Supplier.get() 方法来不断产生下一个元素，这种 Stream 保存的不是元素，而是算法，它可以用来表示无限序列。
-        // 调用 limit() 截取前面若干元素，变成有限序列。
+        // 调用 limit() 截取前面若干元素，变成有限序列。有限序列
         // 例如，编写一个能输出斐波拉契数列（Fibonacci）的 LongStream：// 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
         Stream<Long> stream = Stream.generate(new FibonacciSupplier());// stream的转换不会触发任何计算，这里不会打印get()中的：调用get
         stream.limit(5).forEach(System.out::println);// 这里会先打印：调用get，再输出 n。
@@ -93,7 +94,7 @@ public class StreamExample {
     public static void mapAndForeachAndPeek() {
         // map 入参是 Function 接口函数，返回自定义流
         // foreach 入参是 Consumer 接口函数，会中断流
-        // peak 入参是 Consumer 接口函数，不会中断流，后面可以对流继续操作，在debug 场景比较方便
+        // peek 入参是 Consumer 接口函数，不会中断流，后面可以对流继续操作，在debug 场景比较方便
         Stream.of("apple ", " banana", "Pear", "ORANGE")
                 .map(new Function<String, String>() { // Function 函数，有入参有出参，返回自定义流，此时不会触发计算
                     @Override
@@ -113,6 +114,7 @@ public class StreamExample {
                         System.out.println("fruit:" + s);
                     }
                 });
+        //  peek与foreach相似，peek不会中断流，foreach会中断流。
 
 
         //以下为简写：
@@ -124,7 +126,7 @@ public class StreamExample {
 
 
     /**
-     * filter() 方法用于对 Stream 的每个元素进行测试，符合条件的元素被过滤后生成一个新的 Stream
+     * filter() 方法用于对 Stream 的每个元素进行测试，符合条件的元素生成一个新的 Stream
      * filter() 方法接收的是 Predicate 接口对象，它定义了一个 test 方法，判断元素是否符合条件。
      */
     public static void filterExample() {
@@ -180,13 +182,12 @@ public class StreamExample {
         map.forEach((k, v) -> {
             System.out.println(k + " = " + v);
         });
-        // 以上map后reduce，可用forEach实现，将字符串分割后放入map
+        // 以上map后reduce，可用forEach实现，将字符串分割后放入HashMap
         List<String> st = Stream.of("profile=native", "debug=true", "logging=warn", "interval=500").collect(Collectors.toList());
         Map<String, String> stringMap = new HashMap<>();
         st.forEach(s -> {
             String[] array = s.split("\\=", 2);
             stringMap.put(array[0], array[1]);
-
         });
         stringMap.forEach((k, v) -> {
             System.out.println(k + "=" + v);
@@ -213,9 +214,10 @@ public class StreamExample {
         Stream<String> stream1 = Stream.of("APPL:Apple", "MSFT:Microsoft");
         Map<String, String> map = stream1.collect(Collectors.toMap(s -> s.substring(0, s.indexOf(":")), s -> s.substring(s.indexOf(":") + 1)));
         System.out.println(map);
-        // 4、分组输出 collect(Collectors.groupingBy()),groupBy需要提供两个函数，一个是分组的 key（这里是首字母），一个是分组的 value（这里输出为list）
+        // 4、分组输出 collect(Collectors.groupingBy()),groupingBy需要提供两个函数，一个是分组的 key（这里是首字母），一个是分组的 value（这里输出为list）
         Stream<String> stream2 = Stream.of("Apple", "Banana", "Blackberry", "Coconut", "Avocado", "Cherry", "Apricots");
         Map<String, List<String>> group = stream2.collect(Collectors.groupingBy(s -> s.substring(0, 1), Collectors.toList()));
+        System.out.println(group); // {A=[Apple, Avocado, Apricots], B=[Banana, Blackberry], C=[Coconut, Cherry]}
     }
 
     public static void main(String[] args) {

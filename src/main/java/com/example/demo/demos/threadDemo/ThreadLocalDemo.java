@@ -1,8 +1,5 @@
-package com.example.demo.demos;
+package com.example.demo.demos.threadDemo;
 
-import java.util.concurrent.SynchronousQueue;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
 
 /**
  * @Author: yanjie
@@ -23,13 +20,31 @@ public class ThreadLocalDemo {
         System.out.println("主线程中 inheritableThreadLocal 值：" + inheritableThreadLocal.get());
         System.out.println("主线程中 threadLocal 值：" + threadLocal.get());
         Thread t = new Thread(() -> {
-            System.out.println("t线程中 inheritableThreadLocal 值" + inheritableThreadLocal.get());
+            System.out.println("线程中 inheritableThreadLocal 值" + inheritableThreadLocal.get());
         });
         t.start();
     }
 
     public static void main(String[] args) {
+        Thread t1 = new Thread(() -> System.out.println(1));
+        Thread t2 = new MyThread();
+        Thread t3 = new Thread(new MyRunnable());
+        t1.start();
+
         test();
-        ThreadPoolExecutor executor = new ThreadPoolExecutor(1, 2, 60, TimeUnit.SECONDS, new SynchronousQueue<>());
+    }
+
+    public static class MyThread  extends Thread{
+        @Override
+        public void run() {
+            System.out.println(2);
+        }
+    }
+
+    public static class MyRunnable implements Runnable{
+        @Override
+        public void run() {
+            System.out.println(3);
+        }
     }
 }

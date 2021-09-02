@@ -1,10 +1,10 @@
-package com.example.demo.demos;
+package com.example.demo.demos.ConcurrentUtilExample;
 
 import java.util.concurrent.CountDownLatch;
 
 /**
  * @Author: yanjie
- * @Description:
+ * @Description: CountDownLatch  允许一个或多个线程一直等待，直到一组在其他线程执行的操作全部完成。
  * @Date: 2020/11/07 13:01
  */
 public class JoinCountDownLatchTest {
@@ -25,6 +25,7 @@ public class JoinCountDownLatchTest {
         thread2.start();
         c.await();
         System.out.println("two thread finish");
+        joinTest();
     }
 
     public static void coundownLatchOfNSteps(String[] args) throws InterruptedException {
@@ -45,6 +46,7 @@ public class JoinCountDownLatchTest {
     }
 
 
+
     /*join*/
     public static void joinTest() throws InterruptedException {
         Thread parser1 = new Thread(new Runnable() {
@@ -53,15 +55,15 @@ public class JoinCountDownLatchTest {
                 System.out.println("parser1 working");
             }
         });
-        Thread parserr2 = new Thread(() -> {
+        Thread parser2 = new Thread(() -> {
             System.out.println("parser2 working");
         });
         parser1.start();
-        parserr2.start();
+        parser2.start();
         // join 用于让当前执行线程等待 join 线程执行结束。
         // 其实现原理是不停检查 join 线程是否存活，如果 join 线程存活则让当前线程永远等待。
         parser1.join();
-        parserr2.join();
+        parser2.join();
         System.out.println("all parser finish");
     }
 }

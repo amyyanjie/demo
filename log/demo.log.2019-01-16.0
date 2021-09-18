@@ -30,7 +30,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
-	at com.example.demo.DemoApplication.main(DemoApplication.java:16)
+	at DemoApplication.main(DemoApplication.java:16)
 Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'com.user.passwd' in value "${com.user.passwd}"
 	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:172)
 	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124)
@@ -76,7 +76,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
-	at com.example.demo.DemoApplication.main(DemoApplication.java:16)
+	at DemoApplication.main(DemoApplication.java:16)
 Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'com.user.passwd' in value "${com.user.passwd}"
 	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:172)
 	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124)
@@ -122,7 +122,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
-	at com.example.demo.DemoApplication.main(DemoApplication.java:16)
+	at DemoApplication.main(DemoApplication.java:16)
 Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'com.user.passwd' in value "${com.user.passwd}"
 	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:172)
 	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124)
@@ -168,7 +168,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
-	at com.example.demo.DemoApplication.main(DemoApplication.java:16)
+	at DemoApplication.main(DemoApplication.java:16)
 Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'com.user.passwd' in value "${com.user.passwd}"
 	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:172)
 	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124)
@@ -214,7 +214,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
-	at com.example.demo.DemoApplication.main(DemoApplication.java:16)
+	at DemoApplication.main(DemoApplication.java:16)
 Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'com.user.passwd' in value "${com.user.passwd}"
 	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:172)
 	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124)
@@ -260,7 +260,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
-	at com.example.demo.DemoApplication.main(DemoApplication.java:16)
+	at DemoApplication.main(DemoApplication.java:16)
 Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'com.user.passwd' in value "${com.user.passwd}"
 	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:172)
 	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124)
@@ -306,7 +306,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
-	at com.example.demo.DemoApplication.main(DemoApplication.java:16)
+	at DemoApplication.main(DemoApplication.java:16)
 Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'com.user.passwd' in value "${com.user.passwd}"
 	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:172)
 	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124)
@@ -352,7 +352,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
-	at com.example.demo.DemoApplication.main(DemoApplication.java:16)
+	at DemoApplication.main(DemoApplication.java:16)
 Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'com.user.passwd' in value "${com.user.passwd}"
 	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:172)
 	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124)
@@ -398,7 +398,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
-	at com.example.demo.DemoApplication.main(DemoApplication.java:16)
+	at DemoApplication.main(DemoApplication.java:16)
 Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'com.user.passwd' in value "${com.user.passwd}"
 	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:172)
 	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124)
@@ -444,7 +444,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
-	at com.example.demo.DemoApplication.main(DemoApplication.java:16)
+	at DemoApplication.main(DemoApplication.java:16)
 Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'com.user.passwd' in value "${com.user.passwd}"
 	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:172)
 	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124)

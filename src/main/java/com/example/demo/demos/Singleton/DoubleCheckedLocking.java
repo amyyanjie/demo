@@ -1,18 +1,19 @@
 package com.example.demo.demos.Singleton;
 
 import java.io.Serializable;
-import java.lang.reflect.Modifier;
 
 /**
  * @Author: yanjie
- * @Description: 单例模式--synchronized双重检查锁定 静态内部类
+ * @Description: 单例模式--synchronized双重检查锁定
  * @Date: 2021/04/26 14:58
  */
 public class DoubleCheckedLocking implements Serializable{
     private DoubleCheckedLocking() { // 私有构造函数
-        if (instance != null) {  // 防止反射攻击
+        // 防止反射攻击
+        if (instance != null) {
             throw new IllegalArgumentException("实例已经存在，请通过 getInstance()方法获取");
         }
+
     }
 
     private volatile static DoubleCheckedLocking instance; // 单例对象，静态。volatile禁止重排序
@@ -30,6 +31,9 @@ public class DoubleCheckedLocking implements Serializable{
 
     /**
      * 防止反序列化攻击
+     * 如果单例类实现了序列化接口Serializable，可以反序列化破坏单例（反序列化得到新对象，即能创建两个对象）。
+     * 要么不实现序列化。如果非得实现序列化，需要重写readResolve()返回instance。
+     * 当 ObjectInputStream 类反序列化时，如果对象存在 readResolve 方法，则会调用该方法返回对象。
      */
     private Object readResolve() {
         return instance;

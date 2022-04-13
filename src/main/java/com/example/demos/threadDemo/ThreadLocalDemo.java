@@ -20,17 +20,13 @@ public class ThreadLocalDemo {
         System.out.println("主线程中 inheritableThreadLocal 值：" + inheritableThreadLocal.get());
         System.out.println("主线程中 threadLocal 值：" + threadLocal.get());
         Thread t = new Thread(() -> {
-            System.out.println("线程中 inheritableThreadLocal 值" + inheritableThreadLocal.get());
+            System.out.println("t线程中 inheritableThreadLocal 值" + inheritableThreadLocal.get()); // 输出test_inheritableThreadLocal
+            System.out.println("t线程中 threadLocal 值" + threadLocal.get()); // 输出null
         });
         t.start();
     }
 
     public static void main(String[] args) {
-        Thread t1 = new Thread(() -> System.out.println(1));
-        Thread t2 = new MyThread();
-        Thread t3 = new Thread(new MyRunnable());
-        t1.start();
-
         test();
     }
 

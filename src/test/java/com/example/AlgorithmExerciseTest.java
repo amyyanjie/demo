@@ -1,6 +1,12 @@
 package com.example;
 
+import org.apache.tomcat.util.http.fileupload.FileUtils;
+import org.apache.tomcat.util.http.fileupload.IOUtils;
+import org.checkerframework.checker.units.qual.A;
+
+import java.lang.reflect.Array;
 import java.util.*;
+import java.util.stream.Stream;
 
 /**
  * @Author: yanjie
@@ -121,12 +127,44 @@ public class AlgorithmExerciseTest {
             return parent.get(i);
         }
     }
+    public static void main(String[] args) {
+        ListNode head = new ListNode(1);
+        head.next = new ListNode(2);
+        head.next.next = new ListNode(3);
 
 
-    public int minimumEffortPath(int[][] heights) {
+        random = new Random();
+        map = new HashMap<>();
+        ListNode cur = head;
+        while (cur != null) {
+            map.put(i, cur.val);
+            cur = cur.next;
+            i++;
+        }
 
-        return 0;
+        System.out.println(getRandom());
+        System.out.println(getRandom());
+        System.out.println(getRandom());
+
     }
+
+    static Random random;
+    static Map<Integer, Integer> map;
+    static int i = 0;
+
+
+    public static int getRandom() {
+
+        int r = random.nextInt(i + 1);
+        return map.get(r);
+        // return r;
+    }
+
+
+
+
+
+
 
 
     // final 修饰的字段必须在创建对象时初始化、方法不能被覆写、类不能被继承。 final的可见性、重排序规则。
@@ -162,7 +200,7 @@ public class AlgorithmExerciseTest {
     // transient不被序列化
 
     // map-put 。i= (n-1)&(k.hashCode()^k.hashCode()>>>16)。
-    // 若数组空，初始化16的tab。对应i位置，若空则直接加入。非空说明碰撞。
+    // 若数组空，初始化16的tab。对应i位置，若空则直接加入。非空说明碰撞。哈希碰撞
     // 判断与tab[i]的key是否是同一个key，若是则替换。
     // 判断是否红黑树
     // 若与桶中头结点的key不重复，且bucket数量<8。循环bucket，若遇到key重复的进行替换，否则链到尾结点后。
@@ -275,77 +313,8 @@ public class AlgorithmExerciseTest {
         }
     }
 
-    public static AlgorithmExerciseTest s;
 
-    public static boolean wordBreak(String s, List<String> wordDict) {
-        visited = new boolean[s.length() + 1];
-        return backtrack(0, s, wordDict);
-    }
 
-    // applepenapple apple
-    static boolean[] visited;
-
-    public static boolean backtrack(int startIdx, String s, List<String> wordDict) {
-        if (startIdx >= s.length()) {
-            return true;
-        }
-        // [0,1] [0,2] [0,3] [0,4]
-        // [0,1] [1,2] [2,3]
-
-        for (int i = startIdx; i < s.length(); ++i) {
-            if (visited[i]) {
-
-            }
-
-            String word = s.substring(startIdx, i + 1);
-//            if (wordDict.contains(word) && backtrack(i + 1, s, wordDict)) {
-//                return true;
-//            }
-            if (!wordDict.contains(word)) {
-                continue;
-            }
-            if (backtrack(i + 1, s, wordDict)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public int lengthOfLIS(int[] nums) {
-        // tails[k] 表示长度为 k 的子序列的尾部元素值
-        int[] tails = new int[nums.length + 1];
-        // 设 len 表示当前最长递增子序列的长度，即计算到tails的长度
-        int len = 1;
-        tails[1] = nums[0];
-        for (int i = 1; i < nums.length; i++) {
-            int num = nums[i];
-            // 如果 num 比 当前len长度子序列的尾部元素值还大，则当前num只能放在tail[len+1]。
-            if (num > tails[len]) {
-                len += 1;
-                tails[len] = num;
-                continue;
-            }
-            // 如果 num < tail[len]，说明长度 < len 的子序列尾部值tails[k]可能更新为更小的num
-            // 在tails数组[1,len]中二分查找，找到比 num 大的最小数 tails[k]，将 tails[k]替换成 num。
-            int l = 1;
-            int r = len;
-            int pos = 0;
-            while (l <= r) {
-                int mid = (l + r) / 2;
-                if (tails[mid] < num) {
-                    l = mid + 1;
-                } else {
-                    pos = mid; // 找到比num大的最小值
-                    r = mid - 1;
-                }
-            }
-            // [0,1,4,12],num=2 l=1,r=3, mid=2,nums[mid]=4 > num, r= mid-1=1,
-            // mid=(1+1)/2=1,nums[mid]=1<num,l=mid+1=2,r=1
-            tails[pos] = num;
-
-        }
-        return len;
-    }
 
 
 

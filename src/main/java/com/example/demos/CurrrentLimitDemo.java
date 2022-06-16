@@ -74,4 +74,9 @@ public class CurrrentLimitDemo {
     private long getNowTime() {
         return System.currentTimeMillis();
     }
+
+    public static void main(String[] args) {
+        Long l = null;
+        System.out.println(l.longValue());
+    }
 }

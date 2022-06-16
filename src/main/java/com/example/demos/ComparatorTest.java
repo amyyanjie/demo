@@ -46,6 +46,7 @@ public class ComparatorTest {
         // 若实现的比较器未对null进行判断，可能抛出 NullPointerException
         // 若实现的比较器有对null进行判断，可以存入，但注意值覆盖问题。若是在比较器中判断为null时比较结果返回0，注意在TreeMap中比较结果为0时会发生值替换。
         // 值可以为 null
+        // 在TreeMap中比较结果为0发生值替换。
         TreeMap<User, Object> userTreeMap = new TreeMap<>(new UserComparator());
         userTreeMap.put(null, "b");
         System.out.println(userTreeMap.get(null)); //输出 b
@@ -53,11 +54,13 @@ public class ComparatorTest {
         userTreeMap.put(user1, "c");
         System.out.println(userTreeMap.get(user1)); // 输出 c
         System.out.println(userTreeMap.get(null)); // 此时输出 c，而不是b，因为存入时 user1 与 键null 比较时结果为0，value直接替换
+        System.out.println("later user1:"+userTreeMap.get(user1)); // 输出c
 
         userTreeMap.put(user2, null);
         System.out.println(userTreeMap.get(user2));  //输出 null
 
         System.out.println(userTreeMap.get(null)); //此时输出 null，因为存入时 user2 与 键null 比较时结果为0，value直接替换
+        System.out.println("later user2:"+userTreeMap.get(user2)); // 输出null
     }
 
     public static void main(String[] args) {
@@ -73,8 +76,8 @@ public class ComparatorTest {
         List<User> userList = new ArrayList<>();
         userList.add(user1);
         userList.add(user2);
-        //userList.sort(new UserComparator());
-        Collections.sort(userList, new UserComparator());
+//        Collections.sort(userList, new UserComparator());
+        userList.sort(new UserComparator());
         System.out.println(userList);
 
         /**/
